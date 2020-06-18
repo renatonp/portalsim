@@ -1,0 +1,90 @@
+* Cadastro do usuário no portal
+  - Usuário cadastrou o e-mail no e-cidades;
+  - Usuário cadastrou endereço no e-cidades;
+  - Usuário cadastrou demais informações no e-cidades
+
+* Durante os testes foi verificado que a API não está validando corretamente se os dados do usuário estão atualizados no CGM.
+
+{#320 
+  +"iStatus": 2
+  +"sMessage": "Erro+ao+consulta+usuario+na+cgm_atualizado."
+  +"sSqlerro": true
+}
+
+Após alteração do Eduardo, recebemos esta mensagem:
+
+{#320
+  +"iStatus": 1
+  +"sMessage": "Usuario+com+cadastrado+nao+atualizado."
+  +"k00_atualizado": "N"
+  +"k00_codigo_atualizado": "1"
+  +"sSqlerro": false
+}
+
+Após a atualização, o e-mail foi enviado com sucesso.
+
+
+- Login
+	- Alteração no processo de validação
+	- Exibir a regra de formação da senha (Mizael) - Ok
+
+	- Usuário cadastrou a a senha corretamente
+
+* Colocar descrição da cada serviço
+
+
+- Certidão Negativa
+	* A certidão não consta no registro de certidão emitida no cadastro do usuário no e-cidades;
+	* Colocar o número da certidão no documento;
+	* Sempre está sempre emitindo uma nova certidão (É o mesmo documento?);
+	* Quando for empresa (CNPJ) é necessário ter obrigatóriamente o número de processo;
+	* No e-cidades está mostrando a certidão de valor venal na lista de certidão negativa;
+	* Não existe botão de reimprimir	
+	
+- Validação de Certidão
+	* Validação de certidão: Não é necessário estar LOGADO (Mizael) 
+	* Ao validar a certidão, gerar um documento com as informações básicas da certidão:
+		- Tipo de certidão
+		- A que se refere esta certidão:
+			+ Matrícula do Imóvel
+		- Data de emissão
+		- Validade
+		- Código de autenticação
+
+- Certidão de Valor Venal
+	* Está gerando uma "Declaração"
+	* Colocar número certidão
+	* Está sendo registrada no e-cidades como sendo "Certidão Negativa"
+	
+
+- Certidão ITBI
+	* Colocar todas as certidões
+
+- Certidão de Número de Porta
+	* Dados da certidão errados:
+		- O CEP apresentado é do CGM?
+		- Endereço Oficial
+			+ Município do CGM?
+			+ UF ?
+		- Local/Data buscando do CGM?
+	* Está sendo registrada no e-cidades como sendo "Certidão Negativa"
+
+- Informações do Imóvel
+	* Setor/Quadra/Lote está usando a georeferenciação que não é a que o usuário está acostumado.  Utilizar "Setor/Quadra/Lote de localização"; 
+	Setor : j34_descr - descrição do loteamento
+	Quadra: j06_quadraloc
+	Lote: j06_lote
+	
+	
+- CGM	
+	* Data de emissão 
+	* Endereço não está enviando para o Lecom
+	* Estudar retirar a data de falecimento
+	* Não está enviando o campo "COLABORADOR" para o LECOM
+	
+		- 
+- Quando alterar as informações no portal dentro do e-cidades, o campo login deveria ser o CPF do usuario Logado no portal que realizou a alteração.  Hoje está sendo utilizado o usário "dbpref".
+
+
+
+	

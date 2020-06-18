@@ -1,0 +1,182 @@
+
+.container-fluid {
+    margin-top: 92px !important; 
+    
+}
+
+/** ASIDE NAVBAR **/
+
+.dash-sidebar {
+    background: #DE182A;
+    min-height: 100vh;
+    position: fixed;
+    max-width: 270px;
+    height: 100%;
+    overflow-y: auto;
+    top: 92px;
+    left: -270px;
+    z-index: 20;
+}
+
+.dash-sidebar-nav {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dash-sidebar-nav li {
+    display: block;
+    width: 100%;
+}
+
+.dash-sidebar-nav li a {
+    display: block;
+    width: 100%;
+    padding: 15px 30px;
+    color: #DE182A;
+    background: #FFF;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.dash-sidebar-nav li.active a,
+.dash-sidebar-nav li a:hover {
+    background: #EEE;
+    color: #DE182A;
+    text-decoration: none;
+}
+
+.dash-sidebar-nav .title {
+    font-weight: 900;
+    font-size: 16px;
+    padding: 15px;
+}
+
+/** MENU NAVBAR **/
+
+.navbar-laravel {
+    background-color: #DE182A;
+}
+
+.navbar-laravel .nav-link {
+    color: #FFF !important;
+    font-size: 16px;
+    margin: 0 4px 0 4px;
+}
+
+.nav-link.btn-login {
+    color: #DE182A !important; 
+    padding-left: 15px !important; 
+    padding-right: 15px !important;
+}
+
+.menu-hamburguer {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    padding: 10px 15px;
+    color: #DE182A;
+    cursor: pointer;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.menu-hamburguer label {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: all .3s linear;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.menu-hamburguer .icon-menu {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    cursor: pointer;
+
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    transition: all .3s linear;
+}
+
+.menu-hamburguer .icon-menu:before {
+    content: '';
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    bottom: -9px;
+    background-color: #fff;
+    transition: all .3s linear;
+}
+
+.menu-hamburguer .icon-menu:after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: -9px;
+    background-color: #fff;
+    transition: all .3s linear;
+}
+
+#check:checked ~ .icon-menu {
+    background-color: transparent;
+}
+
+#check:checked ~ .icon-menu:before {
+    transform: translate(0px, -9px) rotate(-45deg);
+}
+
+#check:checked ~ .icon-menu:after {
+    transform: translate(0px, 9px) rotate(45deg);
+}
+
+.title-menu {
+    position: absolute;
+    top: 35px;
+    left: -4px;
+    font-weight: bolder;
+    font-size: 13px;
+    color: #fff;
+}
+
+/* 540W */ 
+@media (max-width: 34em) {
+    
+    .navbar-laravel {
+        height: 76px !important;
+    }
+    
+    .dash-sidebar {
+        top: 76px !important;
+    }
+    
+    .carousel {
+        margin-top: 55px !important;
+    }
+    
+    .navbar-brand .logo-desktop {
+        display: none !important;
+    }
+    
+    .navbar-brand .logo-mobile {
+        display: block !important;
+        height: 76px;
+        margin-right: -32px;
+        
+        position: absolute;
+        top: 0;
+        right: 32px;
+    }
+}

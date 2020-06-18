@@ -1,0 +1,39 @@
+body {  
+    font-family: 'Helvetica'  
+}
+
+.header{
+    margin-bottom: 45px;
+}
+
+.logo{
+    width: 120px;
+}
+
+.div-logo{
+    float: left;
+}
+
+.titulo{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.titulo-autenticacao{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.status{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.texto-autenticacao{
+    text-align: center;
+}
+
+.data-autenticacao{
+    margin-top: 50px;
+    text-align: right;
+}
